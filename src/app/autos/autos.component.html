@@ -1,0 +1,26 @@
+<ul>
+  <li>{{marca}}</li>
+  <li>{{modelo}}</li>
+  <li>{{anio}}</li>
+</ul>
+
+
+
+<div class="container">
+  <button
+    *ngIf="!esVisible"
+    (click)="muestraMarcas()">
+    Mostrar Marcas
+  </button>
+  <button
+    *ngIf="esVisible"
+    (click)="esconderMarcas()">
+    Esconder  Marcas
+  </button>
+  <h1>Nuestro Arreglo</h1>
+
+  <ul id="autos" *ngIf="esVisible">
+    <li *ngFor="let marcas of marcas">{{marcas}}</li>
+  </ul>
+  
+</div>
